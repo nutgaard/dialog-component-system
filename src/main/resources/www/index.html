@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dialog component system</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="base.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+  <h1>Dialog Component System</h1>
+</header>
+<aside>
+    <h2>Controls</h2>
+    <div class="control">
+        <h3>Create new Dialog</h3>
+        <form name="new_dialog">
+            <button>Create dialog</button>
+        </form>
+    </div>
+    <div class="control">
+        <h3>Create new message</h3>
+        <form name="new_message">
+            <label>
+                <span>DialogId</span>
+                <input type="text" name="dialog_id">
+            </label>
+            <label>
+                <span>Content</span>
+                <textarea name="content"></textarea>
+            </label>
+            <button>Add Message</button>
+        </form>
+    </div>
+
+    <div class="control">
+        <h3>Add components</h3>
+        <form name="add_component">
+            <label>
+                <span>EntityType</span>
+                <select name="entity_type">
+                    <option value="dialog">Dialog</option>
+                    <option value="message">Message</option>
+                </select>
+            </label>
+            <label>
+                <span>EntityId</span>
+                <input type="text" name="entity_id">
+            </label>
+            <label>
+                <span>Component type</span>
+                <input type="text" name="component_type">
+            </label>
+            <label>
+                <span>Metadata</span>
+                <textarea name="component_meta"></textarea>
+            </label>
+            <button>Add component to entity</button>
+        </form>
+    </div>
+    <div class="control">
+        <h3>Fetch complete inbox</h3>
+        <form name="fetch_inbox">
+            <button>Fetch</button>
+        </form>
+    </div>
+</aside>
+<main>
+    <div class="inspection">
+        <h2>Introspection</h2>
+        <button data-action="clear">clear</button>
+    </div>
+    <textarea class="inspection__log"></textarea>
+</main>
+</body>
+<script src="index.js" type="application/javascript"></script>
+<script src="form-control.js" type="application/javascript"></script>
+</html>

@@ -1,0 +1,28 @@
+version: '3.4'
+services:
+  database:
+    image: "postgres:14.5-alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DATABASE: dialog-component-system
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: test
+#  kafka:
+#    image: lensesio/fast-data-dev:latest
+#    ports:
+#      - 2181:2181
+#      - 3030:3030
+#      - 8081-8083:8081-8083
+#      - 9581-9585:9581-9585
+#      - 9092:9092
+#    volumes:
+#      - ./kafkadata:/data
+#    environment:
+#      ADV_HOST: localhost # If running application from IDE
+#      #      ADV_HOST: kafka # If running application through docker-compose
+#      SAMPLEDATA: 0
+#      RUNNING_SAMPLEDATA: 0
+#      RUNTESTS: 0
+#      KAFKA_MAX_BLOCK_MS: 10000
+#      KAFKA_LOG_CLEANUP_POLICY: compact
